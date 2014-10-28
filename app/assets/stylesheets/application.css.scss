@@ -1,2 +1,16 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
+
+.jumbotron {
+  background-color: #339966;
+  border: black;
+  font-family: "Comic sans MS";
+  text-align: left;
+  min-width: 1140px;
+  margin: top 15px;
+  margin: right 15px;
+}
+
+.image_location {
+  display: block;
+}
