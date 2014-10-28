@@ -6,23 +6,62 @@
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
+
 <body>
 
-<div class="navbar">
+<div class="navbar navbar-inverse" role="navigation">
   <div class="container">
-    <!-- navbar here -->
-  </div>
+    <div class="navbar-header">
+
+    <%=  link_to_unless_current "About", about_path %> |
+    <%=  link_to_unless_current "FAQS", faqs_path %> |
+  
+    <%=  link_to_unless_current "Users", users_path %>
+
+    </div>
+  </div><!--/.navbar-collapse -->
 </div>
+
+
+
 <div class="container">
+
   <%= yield %>
 </div>
-<footer>
-  <div class="container">
-    <!-- footer stuff here -->
-  </div>
-</footer>
 
-<%= yield %>
+
+
+<footer>
+      <footer class="page-footer" style="width 1140px">
+    <div class="address">
+      <&copy; Denise McCoy 2014><br>
+        <a href="mailto:#">Denise.McCoy@gmail.com</a>
+    </div>
+
+
+     <div class="pull-right">
+       <%= link_to "https://github.com/LittleLadySunshine" do %>
+           <%=image_tag("github.png", width: "30em")%>
+       <% end %> |
+
+       <%= link_to "www.linkedin.com/pub/denise-mccoy/3a/163/962/=nav_responsive_tab_profile" do %>
+           <%=image_tag("linkedin.png", width: "30em")%>
+       <% end %> |
+
+       <%= link_to "https://twitter.com/redrayofsun" do %>
+           <%=image_tag("twitter.png", width: "30em")%>
+       <% end %> |
+
+       <%= link_to "https://students.gschool.it/cohorts/3/class_notes" do %>
+           <%=image_tag("gschool.png", width: "70em")%>
+       <% end %>
+       <hr>
+     </div>
+  </footer>
+</div>
 
 </body>
 </html>
+    <!-- footer stuff here -->
+  </div>
+</footer>
