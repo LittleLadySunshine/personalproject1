@@ -8,6 +8,13 @@ resources :users
   get "/faqs" => "pages#faqs", as: :faqs
   get "/lessons" =>"pages#lessons", as: :lessons
 
+    get '/sign-up' => 'registrations#new', as: :signup
+  post '/sign-up' => 'registrations#create'
+  get '/sign-in' => 'authentication#new', as: :signin
+  post '/sign-in' => 'authentication#create'
+  get '/sign-out' => 'authentication#destroy', as: :signout
+
+
 
 
 
