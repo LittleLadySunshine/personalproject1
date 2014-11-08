@@ -36,4 +36,8 @@ class PagesController <ApplicationController
       @faqs = [question1, question2, question3]
   end
 
+  def users
+    @users = user.new
+    redirect_to users_path(@users)
+  end
 end

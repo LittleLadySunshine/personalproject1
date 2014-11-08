@@ -1,9 +1,8 @@
 Rails.application.routes.draw do
 
-  resources :users
+root to: "pages#index"
 
-  root to: "pages#index"
-
+resources :users
   get "/home" => "pages#index", as: :home
   get "/about" => "pages#about", as: :about
   get "/faqs" => "pages#faqs", as: :faqs
