@@ -1,8 +1,8 @@
 class AuthenticationController < ApplicationController
 
-  # def new
-  #   @user = User.new
-  # end
+  def new
+    @user = User.new
+  end
 
 
   def create
@@ -15,6 +15,8 @@ class AuthenticationController < ApplicationController
       render :new
     end
   end
+
+  
 
   def destroy
     session.clear
