@@ -1,0 +1,20 @@
+<%= form_for @user each do |user| %>
+
+<%= f.label :first_name %>
+<%= f.string :first_name %>
+
+<%= f.label :last_name %>
+<%= f.string :last_name %>
+
+<%= f.label :instrument %>
+<%= f.string :instrument %>
+
+<%= f.label :parent_last_name %>
+<%= f.string :parent_last_name %>
+
+<%= f.label :email %>
+<%= f.string :email %>
+
+<%= f.submit %>
+
+<% end %>
