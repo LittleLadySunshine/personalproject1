@@ -1,6 +1,12 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
+body {
+  background: image-url("symphony.png");
+  background-size: 15%;
+}
+
+
 .jumbotron {
   background-color: #0CA682;
   border: white;
@@ -25,4 +31,13 @@
   margin-right: auto;
   height: 300px;
   width: 200 px;
+}
+
+h2 {
+  color: whitesmoke;
+
+}
+
+h5 {
+  color: whitesmoke;
 }
