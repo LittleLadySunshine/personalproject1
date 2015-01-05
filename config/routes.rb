@@ -7,7 +7,11 @@ resources :users
   get "/about" => "pages#about", as: :about
   get "/faqs" => "pages#faqs", as: :faqs
   get "/lessons" =>"pages#lessons", as: :lessons
-  get'/blog' => 'pages#blog', as: :blog
+
+
+resources :media
+
+
 
     get '/sign-up' => 'registrations#new', as: :signup
   post '/sign-up' => 'registrations#create'
