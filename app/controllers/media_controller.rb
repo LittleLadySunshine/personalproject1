@@ -1,17 +1,17 @@
 class MediaController < ApplicationController
-  def new
-  end
 
-  def create
-  end
+#for Twitter
 
-  def delete
-  end
+def show
 
-  def destroy
-  end
+  twitter_api = TwitterAPI.new
+    @current_tweets = tracker_api.stories(current_user.tracker_token, params[:id])
 
-  def index
+    @name = " "
+    @current_tweets.each do |tweet|
+      if params[:id] == project[:id].to_s
+        @name = project[:name]
+      end
+    end
   end
-
 end
