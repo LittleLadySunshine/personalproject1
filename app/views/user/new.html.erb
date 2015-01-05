@@ -1,20 +1,47 @@
-<%= form_for @user each do |user| %>
+<div class= "well col-sm-4 col-sm-offset-4">
 
-<%= f.label :first_name %>
-<%= f.string :first_name %>
+  <h1>Sign Up for an Account!</h1>
 
-<%= f.label :last_name %>
-<%= f.string :last_name %>
+  <% if @user.errors.present? %>
+  <div class= "alert alert-danger">
+    <ul>
+      <% @user.errors.full_messages.each do |message| %>
+      <li><%= message %></li>
+      <% end %>
+    </ul>
+  </div>
+  <% end %>
 
-<%= f.label :instrument %>
-<%= f.string :instrument %>
 
-<%= f.label :parent_last_name %>
-<%= f.string :parent_last_name %>
+  <%= form_for @user, url: signup_path  do |f| %>
+  <div class="form-group">
+    <%= f.label :first_name, class: "control-label" %>
+    <%= f.text_field :first_name, class: "form-control" %>
+  </div>
 
-<%= f.label :email %>
-<%= f.string :email %>
+  <div class="form-group">
+    <%= f.label :last_name, class: "control-label" %>
+    <%= f.text_field :last_name, class: "form-control" %>
+  </div>
 
-<%= f.submit %>
+  <div class="form-group">
+    <%= f.label :instrument, class: "control-label" %>
+    <%= f.text-field :instrument, class: "form-control" %>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :parent_last_name, class: "control-label" %>
+    <%= f.string :parent_last_name, class: "form-control" %>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :email, class: "control-label" %>
+    <%= f.string :email, class: "form-control" %>
+  </div>
+
+
+  <%= f.submit "Sign Up!", class: "btn btn-primary" %>
+</div>
+
 
 <% end %>

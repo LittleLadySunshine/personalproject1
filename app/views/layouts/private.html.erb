@@ -2,7 +2,7 @@
 <html>
 <head>
 
-  <title><%= content_for(:title) || "Denise McCoy" %></title>
+  <title><%= content_for(:title) || "Denise McCoy - Music" %></title>
 
 
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
@@ -17,9 +17,8 @@
         <h2>Denise McCoy - Musician, Music Teacher</h2>
         <h5>Voice, Woodwinds, Piano, Cello, Guitar</h5>
         <%= link_to "Home", root_path, class: "navbar-brand" %>
-        <%=  link_to_unless_current "Biography", about_path, class: "navbar-brand" %>
+        <%=  link_to_unless_current "About", about_path, class: "navbar-brand" %>
         <%= link_to_unless_current "Teaching", lessons_path, class: "navbar-brand" %>
-        <%= link_to_unless_current "Blog", blog_path, class: "navbar-brand" %>
 
 
         <ul class= "nav navbar-nav navbar-right">
@@ -34,22 +33,18 @@
       </div>
     </div>
 
-    <br>
-
-
     <div class="container">
       <%= yield %>
     </div>
 
-  <footer class="container">
-    <hr>
-    <div class="text-center">
+    <footer class="container">
+      <hr>
       <div class="address">
         <a href="mailto:#">Denise.L.McCoy@gmail.com</a>
       </div>
     </div>
-  </div>
-</footer>
+  </footer>
 
 </body>
-</html>
+</
+html>

@@ -7,13 +7,13 @@ resources :users
   get "/about" => "pages#about", as: :about
   get "/faqs" => "pages#faqs", as: :faqs
   get "/lessons" =>"pages#lessons", as: :lessons
+  get'/blog' => 'pages#blog', as: :blog
 
     get '/sign-up' => 'registrations#new', as: :signup
   post '/sign-up' => 'registrations#create'
   get '/sign-in' => 'authentication#new', as: :signin
   post '/sign-in' => 'authentication#create'
   get '/sign-out' => 'authentication#destroy', as: :signout
-
 
 
 
