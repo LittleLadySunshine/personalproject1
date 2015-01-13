@@ -10,7 +10,8 @@ class RegistrationsController < ApplicationController
       :last_name,
       :email,
       :password,
-      :password_confirmation)
+      :password_confirmation,
+      :calendar_id)
       )
     if @user.save
       session[:user_id] = @user.id

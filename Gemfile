@@ -39,6 +39,7 @@ gem 'twitter'
 
 gem 'dotenv-rails', :groups => [:development, :test]
 
+gem 'pry-rails'
 
 # Use unicorn as the app server
 # gem 'unicorn'
