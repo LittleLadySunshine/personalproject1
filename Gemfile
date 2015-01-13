@@ -37,6 +37,7 @@ gem 'autoprefixer-rails'
 
 gem 'twitter'
 
+gem 'dotenv-rails', :groups => [:development, :test]
 
 
 # Use unicorn as the app server

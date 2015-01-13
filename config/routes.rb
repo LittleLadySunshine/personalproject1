@@ -2,25 +2,20 @@ Rails.application.routes.draw do
 
 root to: "pages#index"
 
+
+resources :media
 resources :users
+
   get "/home" => "pages#index", as: :home
   get "/about" => "pages#about", as: :about
   get "/faqs" => "pages#faqs", as: :faqs
   get "/lessons" =>"pages#lessons", as: :lessons
 
-
-resources :media
-
-
-
-    get '/sign-up' => 'registrations#new', as: :signup
+  get '/sign-up' => 'registrations#new', as: :signup
   post '/sign-up' => 'registrations#create'
   get '/sign-in' => 'authentication#new', as: :signin
   post '/sign-in' => 'authentication#create'
   get '/sign-out' => 'authentication#destroy', as: :signout
-
-
-
 
 
 

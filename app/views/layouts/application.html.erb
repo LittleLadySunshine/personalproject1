@@ -24,7 +24,7 @@
 
         <ul class= "nav navbar-nav navbar-right">
           <% if current_user %>
-          <%= link_to "#{current_user.first_name} #{current_user.last_name}", user_path(current_user) %>
+          <%= link_to "#{current_user.first_name} #{current_user.last_name}", users_path %>
           <%= link_to "Sign Out", signout_path %>
           <% else %>
           <%= link_to "Sign Up", signup_path %>
@@ -48,6 +48,10 @@
         <a href="mailto:#">Denise.L.McCoy@gmail.com</a>
       </div>
     </div>
+
+
+
+
   </div>
 </footer>
 

@@ -2,16 +2,16 @@ class MediaController < ApplicationController
 
 #for Twitter
 
-def show
+  def index
+    # client = Twitter::REST::Client.new do |config|
+    #   config.consumer_key        = "FsWyitvZj5IBVzIdnxmnPakgs"
+    #   config.consumer_secret     = "H4nlFpFMSdGBXjlNDThYolr0X9r9sus5XbcNtddoys2uchHEtC"
+    #   config.access_token        = "2817315245-60C8vIbYit8GGiM79WiDtHl5b5J4AfjXiGmnf52"
+    #   config.access_token_secret = "1zQOnoLYAVBkdtVAza1nXCUw3T6VkAqG0agV1ZxKRLSty"
+    # end
 
-  twitter_api = TwitterAPI.new
-    @current_tweets = tracker_api.stories(current_user.tracker_token, params[:id])
 
-    @name = " "
-    @current_tweets.each do |tweet|
-      if params[:id] == project[:id].to_s
-        @name = project[:name]
-      end
-    end
+    @current_tweets = CLIENT.user_timeline("redrayofsun").take(5)
   end
+
 end
