@@ -1,13 +1,17 @@
 Welcome User!
 
 <div class="row">
-  <div class= "column-md-5">
-    <div class="calendar">
-      <iframe src="https://www.google.com/calendar/embed?src=<%= current_user.calendar_id.html_safe %>&ctz=America/Denver" style="border: 0" width="400" height="300" frameborder="0" scrolling="no"></iframe>
-    </div>
 
+
+  <div class="col-md-7">
     <div class="assignments">
       <h3>List of Assignments</h3>
     </div>
   </div>
+  
+  <div class= "col-md-5">
+      <iframe src="https://www.google.com/calendar/embed?src=<%= current_user.calendar_id.html_safe %>&ctz=America/Denver" style="border: 0" width="400" height="300" frameborder="0" scrolling="no"></iframe>
+  </div>
+
+
 </div>

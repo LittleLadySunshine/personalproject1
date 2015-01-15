@@ -13,14 +13,19 @@
 <body>
   <div class="navbar navbar-inverse" role="navigation">
     <div class="container">
-      <div class="navbar-header">
+        <% if current_user %>
+        <h2>Welcome <%= current_user.first_name %>!</h2>
+        <%= link_to "Lesson Schedule", root_path, class: "navbar-brand" %>
+        <%=  link_to_unless_current "Account Info", about_path, class: "navbar-brand" %>
+        <%= link_to_unless_current "Resources", lessons_path, class: "navbar-brand" %>
+        <% else  %>
         <h2>Denise McCoy - Musician, Music Teacher</h2>
         <h5>Voice, Woodwinds, Piano, Cello, Guitar</h5>
         <%= link_to "Home", root_path, class: "navbar-brand" %>
         <%=  link_to_unless_current "Biography", about_path, class: "navbar-brand" %>
         <%= link_to_unless_current "Teaching", lessons_path, class: "navbar-brand" %>
         <%= link_to_unless_current "Media", media_path, class: "navbar-brand" %>
-
+        <% end  %>
 
         <ul class= "nav navbar-nav navbar-right">
           <% if current_user %>
@@ -30,9 +35,9 @@
           <%= link_to "Sign Up", signup_path %>
           <%= link_to "Sign In", signin_path %>
           <% end %>
-        </div>
-      </div>
     </div>
+  </div>
+
 
     <br>
 

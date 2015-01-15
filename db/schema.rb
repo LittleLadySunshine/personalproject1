@@ -11,20 +11,29 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150114174344) do
+ActiveRecord::Schema.define(version: 20150115154853) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
-  create_table "users", force: true do |t|
+  create_table "parent", force: true do |t|
+    t.integer "parent_id"
+    t.string  "first_name"
+    t.string  "last_name"
+    t.string  "email"
+    t.string  "phone_number"
+  end
+
+  create_table "students", force: true do |t|
+    t.integer "parent_id"
+    t.integer "student_id"
     t.string  "first_name"
     t.string  "last_name"
     t.string  "instrument"
-    t.string  "email"
-    t.string  "password_digest"
+    t.string  "school_name"
+    t.string  "grade"
+    t.string  "years_playing"
     t.string  "calendar_id"
-    t.boolean "admin",            default: false
-    t.string  "parent_last_name"
   end
 
 end
