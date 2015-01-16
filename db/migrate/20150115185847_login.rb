@@ -1,0 +1,6 @@
+class Login < ActiveRecord::Migration
+  def change
+    add_column :students, :user_name, :string
+    add_column :students, :password_digest, :string
+  end
+end

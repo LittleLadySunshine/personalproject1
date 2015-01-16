@@ -18,3 +18,7 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require_tree .
+
+$(document).on('click', function() {
+    console.log('foo');
+});
